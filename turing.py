@@ -36,7 +36,7 @@ def create_model(width, height, states, symbols):
 def create_palette(colors):
     result = (c_uint * len(colors))()
     for i, (r, g, b) in enumerate(colors):
-        result[i] = 255 << 24 | r << 16 | g << 8 | b
+        result[i] = 255 << 24 | b << 16 | g << 8 | r
     return result
 
 def update(model):
